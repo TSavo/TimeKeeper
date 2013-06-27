@@ -17,7 +17,7 @@ public class TimeKeeperTest {
 		long actualTime = System.currentTimeMillis();
 		long timeKeeperTime = TimeKeeper.currentTimeMillis();
 		// allow for up to 2 milliseconds between calls.
-		Assert.assertTrue(actualTime == timeKeeperTime || actualTime == timeKeeperTime - 1 || actualTime == timeKeeperTime - 2);
+		Assert.assertTrue(actualTime == timeKeeperTime || actualTime <= timeKeeperTime + 10);
 	}
 
 	@Test
